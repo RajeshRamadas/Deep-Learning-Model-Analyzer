@@ -575,7 +575,6 @@ class VideoPlayer(QMainWindow):
                 cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
             edge_frame = frame
-
         else:
             edge_frame = frame
         return edge_frame

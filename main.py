@@ -28,18 +28,23 @@ def check_python_version(version):
             check=True
         )
         installed_version = result.stdout.strip().split()[1]
+
+        # Split both required and installed versions and compare them
         if installed_version.startswith(version):
             print(f"Python {version} is installed.")
             print(f"Version info: {installed_version}")
         else:
             print(f"Expected Python {version}, but found {installed_version}.")
             print(f"Please install Python {version} from the official Python website.")
+            sys.exit(1)  # Exit if the wrong Python version is detected.
+
     except subprocess.CalledProcessError as e:
         print(f"Error checking Python version: {e}")
-        print(f"Please install Python {version} from the official Python website.")
+        sys.exit(1)
     except FileNotFoundError:
         print(f"Python is not installed.")
         print(f"Please install Python {version} from the official Python website.")
+        sys.exit(1)
 
 
 def install_package(package_name, version):
@@ -72,15 +77,19 @@ def validate_packages():
 
 
 def main():
+    # Validate packages before starting the application
+    validate_packages()
 
+    # PyQt6 Application setup
     QCoreApplication.setApplicationName("Deep Learning Model Analyzer")
     app = QApplication(sys.argv)
     window = VideoPlayer()
     window.show()
+
     sys.exit(app.exec())
 
 
 if __name__ == "__main__":
-    validate_packages()
+    # Check Python version before anything else
     check_python_version(python_version)
     main()
