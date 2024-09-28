@@ -29,7 +29,7 @@ This is a Python-based video analysis tool that uses PyQt6 for the graphical use
 
 1. **Run the application**:
     ```bash
-    python yolo8.py
+    python main.py
     ```
 
 2. **Load a video**:
