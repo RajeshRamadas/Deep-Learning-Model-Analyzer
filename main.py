@@ -10,11 +10,12 @@ from gui.pyqt6_gui import VideoPlayer
 
 # List of required packages with version specifications
 required_packages = {
-    'numpy': '1.26.4',
-    'Pillow': '9.4.0',
-    'PyQt6': '6.7.1'
+    'PyQt6': '6.2.2',
+    'opencv-python-headless': '4.5.5.64',
+    'numpy': '1.21.4',
+    'ultralytics': '8.0.0'
 }
-python_version = "3.9"  # Python version for running code
+python_version = "3.11"  # Python version for running code
 
 
 def check_python_version(version):
