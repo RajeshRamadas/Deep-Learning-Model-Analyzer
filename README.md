@@ -59,7 +59,7 @@ This is a Python-based video analysis tool that uses PyQt6 for the graphical use
 A custom logging handler that logs messages to a `QPlainTextEdit` widget.
 
 ### `VideoPlayer`
-The main class that extends `QMainWindow` and contains all the functionalities of the video analysis tool.
+The main class that extends `QMainWindow` and contains all the functionalities of the video analysis tool.\
 
 #### Key Methods
 
@@ -69,6 +69,9 @@ The main class that extends `QMainWindow` and contains all the functionalities o
 - `apply_edge_detection`: Applies the selected edge detection algorithm or YOLO model to the video frames.
 - `process_frame`: Processes each video frame by adjusting brightness, contrast, cropping, resizing, and applying the selected algorithm.
 - `update_frame`: Updates the video frame displayed in the GUI.
+
+## Deep Learning Model Analyzer 
+![img.png](doc/image/img.png)
 
 ## License
 
