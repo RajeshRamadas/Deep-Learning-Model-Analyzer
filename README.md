@@ -59,7 +59,10 @@ This is a Python-based video analysis tool that uses PyQt6 for the graphical use
 A custom logging handler that logs messages to a `QPlainTextEdit` widget.
 
 ### `VideoPlayer`
-The main class that extends `QMainWindow` and contains all the functionalities of the video analysis tool.
+The main class that extends `QMainWindow` and contains all the functionalities of the video analysis tool.\
+
+## Deep Learning Model Analyzer 
+![img.png](doc/image/img.png)
 
 #### Key Methods
 
