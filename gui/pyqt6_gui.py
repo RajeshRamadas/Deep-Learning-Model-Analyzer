@@ -323,8 +323,8 @@ class VideoPlayer(QMainWindow):
         crop_controls_group = QGroupBox("Crop Controls")
         self.crop_controls_layout = QVBoxLayout()  # Define the layout here
 
-        self.crop_start_x_slider = self.create_crop_slider("Crop Start X", 0, 1920, 0)
-        self.crop_start_y_slider = self.create_crop_slider("Crop Start Y", 0, 1080, 0)
+        self.crop_start_x_slider = self.create_crop_slider("Crop Start X", 0, 1920, 640)
+        self.crop_start_y_slider = self.create_crop_slider("Crop Start Y", 0, 1080, 480)
         self.crop_width_slider = self.create_crop_slider("Crop Width", 1, 1920, 640)
         self.crop_height_slider = self.create_crop_slider("Crop Height", 1, 1080, 480)
         self.reset_crop_button = self.create_button("Reset Crop", self.reset_crop)
