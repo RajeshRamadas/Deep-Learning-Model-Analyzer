@@ -92,5 +92,5 @@ def main():
 
 if __name__ == "__main__":
     # Check Python version before anything else
-    check_python_version(python_version)
+    # check_python_version(python_version)
     main()
