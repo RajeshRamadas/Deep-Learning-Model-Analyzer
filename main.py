@@ -79,7 +79,7 @@ def validate_packages():
 
 def main():
     # Validate packages before starting the application
-    validate_packages()
+    # validate_packages()
 
     # PyQt6 Application setup
     QCoreApplication.setApplicationName("Deep Learning Model Analyzer")
