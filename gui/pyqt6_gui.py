@@ -323,10 +323,10 @@ class VideoPlayer(QMainWindow):
         crop_controls_group = QGroupBox("Crop Controls")
         self.crop_controls_layout = QVBoxLayout()  # Define the layout here
 
-        self.crop_start_x_slider = self.create_crop_slider("Crop Start X", 0, 1920, 640)
-        self.crop_start_y_slider = self.create_crop_slider("Crop Start Y", 0, 1080, 480)
-        self.crop_width_slider = self.create_crop_slider("Crop Width", 1, 1920, 640)
-        self.crop_height_slider = self.create_crop_slider("Crop Height", 1, 1080, 480)
+        self.crop_start_x_slider = self.create_crop_slider("Crop Start X", 0, 1920, 0)
+        self.crop_start_y_slider = self.create_crop_slider("Crop Start Y", 0, 1080, 0)
+        self.crop_width_slider = self.create_crop_slider("Crop Width", 1, 1920, 1920)
+        self.crop_height_slider = self.create_crop_slider("Crop Height", 1, 1080, 1080)
         self.reset_crop_button = self.create_button("Reset Crop", self.reset_crop)
 
         self.crop_controls_layout.addWidget(QLabel("Crop Start X"))
@@ -354,8 +354,8 @@ class VideoPlayer(QMainWindow):
         resize_controls_group = QGroupBox("Resize Controls")
         self.resize_controls_layout = QVBoxLayout()  # Define the layout here
 
-        self.resize_width_input = self.create_resize_input("Resize Width", 1, 1920, 640)
-        self.resize_height_input = self.create_resize_input("Resize Height", 1, 1080, 480)
+        self.resize_width_input = self.create_resize_input("Resize Width", 1, 1300, 1200)
+        self.resize_height_input = self.create_resize_input("Resize Height", 1, 900, 800)
         self.reset_resize_button = self.create_button("Reset Resize", self.reset_resize)
 
         self.resize_controls_layout.addWidget(QLabel("Resize Width"))
@@ -438,10 +438,10 @@ class VideoPlayer(QMainWindow):
         self.contrast = 1.0
         self.crop_x = 0
         self.crop_y = 0
-        self.crop_width = 640
-        self.crop_height = 480
-        self.resize_width = 640
-        self.resize_height = 480
+        self.crop_width = 1920
+        self.crop_height = 1080
+        self.resize_width = 1200
+        self.resize_height = 800
         self.snapshot_counter = 0
 
     def init_timer(self):
@@ -641,8 +641,8 @@ class VideoPlayer(QMainWindow):
     def reset_crop(self):
         self.crop_start_x_slider.setValue(0)
         self.crop_start_y_slider.setValue(0)
-        self.crop_width_slider.setValue(640)
-        self.crop_height_slider.setValue(480)
+        self.crop_width_slider.setValue(1920)
+        self.crop_height_slider.setValue(1080)
         self.update_crop()
         self.logger.info("Crop reset to default values")
 
@@ -652,8 +652,8 @@ class VideoPlayer(QMainWindow):
         self.logger.info(f"Resize updated: width={self.resize_width}, height={self.resize_height}")
 
     def reset_resize(self):
-        self.resize_width_input.setValue(640)
-        self.resize_height_input.setValue(480)
+        self.resize_width_input.setValue(1200)
+        self.resize_height_input.setValue(800)
         self.update_resize()
         self.logger.info("Resize reset to default values")
 
