@@ -16,7 +16,8 @@ This is a Python-based video analysis tool that uses PyQt6 for the graphical use
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/deep-learning-model-analyzer.git
+    git clone [https://github.com/yourusername/deep-learning-model-analyzer.git ](https://github.com/RajeshRamadas/Deep-Learning-Model-Analyzer.git)
+    
     cd deep-learning-model-analyzer
     ```
 
