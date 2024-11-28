@@ -72,7 +72,7 @@ The main class that extends `QMainWindow` and contains all the functionalities o
 - `update_frame`: Updates the video frame displayed in the GUI.
 
 ## Deep Learning Model Analyzer 
-![img.png](doc/image/img.png)
+![img.png](02-Implementation/doc/image/img.png)
 
 ## License
 
