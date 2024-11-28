@@ -5,7 +5,6 @@ from PyQt6.QtCore import QCoreApplication
 from PyQt6.QtWidgets import QApplication
 
 # Custom imports
-import global_vars
 from gui.pyqt6_gui import VideoPlayer
 
 # List of required packages with version specifications
